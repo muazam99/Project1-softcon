@@ -11,7 +11,7 @@ pipeline {
             }
             post {
                 always {
-                    jiraSendBuildInfo branch: 'master', site: 'groupgradient.atlassian.net'
+                    jiraSendBuildInfo branch: 'main', site: 'groupgradient.atlassian.net'
                 }
             }
         }
@@ -27,10 +27,10 @@ pipeline {
         }
         stage('Deploy - Production') {
             when {
-                branch 'master'
+                branch 'main'
             }
             steps {
-                echo 'Deploying to Production from master...'
+                echo 'Deploying to Production from main...'
             }
             post {
                 always {
