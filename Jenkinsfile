@@ -1,6 +1,6 @@
 pipeline {
 environment {
-registry = "burhan99/Project1-softcon"
+registry = "burhan99/project1"
 registryCredential = 'dockerhub_id'
 dockerImage = ''
 }
